@@ -57,5 +57,3 @@ if (!empty($request->get['method'])) {
     $action->make('/main/index');
 }
 $response->output($action->go());
-
- 
