@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="/src/style.css">
     <link rel="stylesheet" href="/src/login.css">
     <link href="https://fonts.googleapis.com/css?family=Dosis:500,600|Open+Sans:400,600" rel="stylesheet">
+
+    <script src="//code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/jquery.form.min.js"></script>
 </head>
 <body>
 
@@ -22,7 +27,8 @@
                 <li class="menu__item"><a href="/" class="link menu__link">Головна</a></li>
                 <li class="menu__item"><a href="#services" class="link menu__link">Сервіси</a></li>
                 <li class="menu__item"><a href="#blog" class="link menu__link">Блог</a></li>
-                <li class="menu__item"><a href="/index.php?method=/account/join" class="link menu__link">Реєстрація</a></li>
+                <li class="menu__item"><a href="/index.php?method=/account/join" class="link menu__link">Реєстрація</a>
+                </li>
                 <li class="menu__item"><a href="/index.php?method=/account/login" class="link menu__link">Вхід</a></li>
             </ul>
         </nav>
@@ -31,9 +37,9 @@
 <div class="container">
     <img src="https://dwstroy.ru/lessons/les3373/demo/img/men.png">
 
-    <form>
+    <form role="form" id="joinForm" action="#" method="POST">
         <div class="dws-input">
-            <input type="text" name="username" placeholder="Введите логин">
+            <input type="text" name="login" placeholder="Введите логин">
         </div>
         <div class="dws-input">
             <input type="password" name="password" placeholder="Введите пароль">
@@ -41,10 +47,10 @@
         <div class="dws-input">
             <input type="email" name="email" placeholder="Введите Email">
         </div>
+        <input class="dws-submit" type="submit" name="submit" value="Зареєструватися"><br/>
 
-        <input class="dws-submit" type="submit" name="submit" value="Зареєструватися"><br />
-
-    </form></div>
+    </form>
+</div>
 
 </div>
 
@@ -78,6 +84,22 @@
         </div>
     </div>
 </footer>
-
+<script>
+    $('#joinForm').ajaxForm({
+        url: '/index.php?method=/account/join/reg',
+        dataType: 'text',
+        success: function (data) {
+            data = $.parseJSON(data);
+            if (data.error) {
+                $('button[type=submit]').prop('disabled', false);
+                return showError(data.error.message);
+            }
+            setTimeout("redirect('/')", 1500);
+        },
+        beforeSubmit: function (arr, $form, options) {
+            $('button[type=submit]').prop('disabled', true);
+        }
+    });
+</script>
 </body>
 </html>

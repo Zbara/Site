@@ -12,11 +12,13 @@ class loginController extends Controller
      */
     public function index()
     {
-        /** no login */
+        /**
+         * если есть авторизация, тогда перекидаем
+         */
         if ($this->auth->users['auth']) {
             return $this->response->redirect('/');
         }
-        return view('/login.tpl', []);
+        return $this->smarty->fetch("login.tpl");
     }
 
 
