@@ -1,33 +1,16 @@
-/*
-* @LitePanel
-* @Developed by QuickDevel
-*/
+
 
 /* Ошибки, предупреждения... */
-function showError(text) {
-    var element = $('<div class="alert in fade alert-danger"><strong>Ошибка!</strong> ' + text + '</div>').prependTo('#for_alert');
+function showMessage(text) {
+    var element = $('<div class="err_red no_display name_errors">' + text + '</div>').prependTo('#for_alert');
     setTimeout(function() {
         element.fadeOut(500, function() {
             $(this).remove();
         });
     }, 10000);
 }
-function showWarning(text) {
-    var element = $('<div class="alert in fade alert-warning"><strong>Проверка данных...</strong> ' + text + '</div>').prependTo('#for_alert');
-    setTimeout(function() {
-        element.fadeOut(500, function() {
-            $(this).remove();
-        });
-    }, 10000);
-}
-function showSuccess(text) {
-    var element = $('<div class="alert in fade alert-success"><strong>Выполнено!</strong> ' + text + '</div>').prependTo('#for_alert');
-    setTimeout(function() {
-        element.fadeOut(500, function() {
-            $(this).remove();
-        });
-    }, 10000);
-}
+
+
 
 function redirect(url) {
     document.location.href=url;

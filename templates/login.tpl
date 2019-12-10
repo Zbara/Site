@@ -36,6 +36,9 @@
 </header>
 <div class="container">
     <img src="https://dwstroy.ru/lessons/les3373/demo/img/men.png">
+
+    <div id="for_alert"></div>
+
     <form  role="form" id="loginForm" action="#" method="POST">
         <div class="dws-input">
             <input type="text" name="login" placeholder="Введите логин">
@@ -85,8 +88,9 @@
             data = $.parseJSON(data);
             if (data.error) {
                 $('button[type=submit]').prop('disabled', false);
-                return showError(data.error.message);
+                return showMessage(data.error.message);
             }
+            showMessage(data.success.message);
             setTimeout("redirect('/')", 1500);
         },
         beforeSubmit: function (arr, $form, options) {
