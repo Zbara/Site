@@ -21,6 +21,7 @@ require_once(include_dir . '/core/class_request.php');
 require_once(include_dir . '/inc/mysql.php');
 require_once(include_dir . '/core/class_response.php');
 require_once(include_dir . '/core/class_action.php');
+require_once(include_dir . '/smarty/Smarty.class.php');
 
 /**
  * Запуск классов
@@ -41,6 +42,13 @@ $system->response = $response;
 /** @var  $action */
 $action = new Action($system);
 $system->action = $action;
+
+
+/** @var  tpl */
+$system->smarty = new Smarty;
+$system->smarty->debugging = true;
+$system->smarty->caching = false;
+$system->smarty->cache_lifetime = 120;
 
 /** @var  $login  проверка на открытую сессию */
 require_once(include_dir . '/login.php');

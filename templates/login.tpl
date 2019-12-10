@@ -18,7 +18,7 @@
 
 <header class="header header_blog">
     <div class="header__wrapper wrapper">
-        <div class="logo"><a class="link" href="index.html"><img alt="logo" src="src/img/logo.svg"></a></div>
+        <div class="logo"><a class="link" href="/"><img alt="logo" src="/src/img/logo.svg"></a></div>
         <nav class="header__nav nav">
             <input class="nav__check" type="checkbox">
             <span class="nav__line"></span>
@@ -47,7 +47,7 @@
         <a href="#">Восстановить пароль</a>
     </form></div>
 
-</div>
+</div
 <footer class="footer" id="contacts">
     <div class="footer__wrapper wrapper">
         <div class="footer__info">Агенство Renko</h4>
@@ -83,13 +83,11 @@
         dataType: 'text',
         success: function (data) {
             data = $.parseJSON(data);
-
             if (data.error) {
                 $('button[type=submit]').prop('disabled', false);
                 return showError(data.error.message);
             }
-            showSuccess(data.success.message);
-            setTimeout("redirect('/index.php?method=/account/')", 1500);
+            setTimeout("redirect('/')", 1500);
         },
         beforeSubmit: function (arr, $form, options) {
             $('button[type=submit]').prop('disabled', true);

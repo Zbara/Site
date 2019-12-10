@@ -82,7 +82,7 @@ class loginController extends Controller
         /** @var  $cookie_lifetime */
         $cookie_lifetime = $auth_time + (60 * 60 * 24 * 30 * 6);
 
-        setcookie('remixsid_d', $remixsid, $cookie_lifetime, '/', $this->request->server['SERVER_NAME']);
+        setcookie('remixsid', $remixsid, $cookie_lifetime, '/', $this->request->server['SERVER_NAME']);
         
         return true;
     }

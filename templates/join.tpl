@@ -12,7 +12,7 @@
 
 <header class="header header_blog">
     <div class="header__wrapper wrapper">
-        <div class="logo"><a class="link" href="index.html"><img alt="logo" src="src/img/logo.svg"></a></div>
+        <div class="logo"><a class="link" href="/"><img alt="logo" src="/src/img/logo.svg"></a></div>
         <nav class="header__nav nav">
             <input class="nav__check" type="checkbox">
             <span class="nav__line"></span>

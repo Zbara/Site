@@ -11,7 +11,7 @@
 
 <header class="header">
     <div class="header__wrapper wrapper">
-        <div class="logo"><a class="link" href="index.html"><img src="src/img/logo.svg" alt="logo"></a></div>
+        <div class="logo"><a class="link" href="/"><img src="/src/img/logo.svg" alt="logo"></a></div>
         <nav class="header__nav nav">
             <input type="checkbox" class="nav__check">
             <span class="nav__line"></span>
@@ -21,8 +21,15 @@
                 <li class="menu__item"><a href="/" class="link menu__link">Головна</a></li>
                 <li class="menu__item"><a href="#services" class="link menu__link">Сервіси</a></li>
                 <li class="menu__item"><a href="#blog" class="link menu__link">Блог</a></li>
-                <li class="menu__item"><a href="/index.php?method=/account/join" class="link menu__link">Реєстрація</a></li>
-                <li class="menu__item"><a href="/index.php?method=/account/login" class="link menu__link">Вхід</a></li>
+
+                {if $auth}
+                    <li class="menu__item"><a href="/index.php?method=/account/logout" class="link menu__link">Вихід</a>
+                    </li>
+                {else}
+                    <li class="menu__item"><a href="/index.php?method=/account/join" class="link menu__link">Реєстрація</a></li>
+                    <li class="menu__item"><a href="/index.php?method=/account/login" class="link menu__link">Вхід</a>
+                    </li>
+                {/if}
             </ul>
         </nav>
     </div>
@@ -33,7 +40,8 @@
         <div class="main-slider__title title">
             <h1 class="main-slider__heading heading">СММ</h1>
             <h2 class="main-slider__subheading subheading">Агенство Renko</h2>
-            <p class="main-slider__text text">Ми надаємо послуги з налаштування та ведення таргетированї реклами в соціальних мережах
+            <p class="main-slider__text text">Ми надаємо послуги з налаштування та ведення таргетированї реклами в
+                соціальних мережах
                 Співпраця з нами забезпечить ефективне просування Вашого бізнесу і посприяє залученню нових клієнтів
             </p>
         </div>
@@ -46,7 +54,8 @@
         <div class="services__title title">
             <h3 class="services__heading heading">Послуги</h3>
             <h4 class="services__subheading subheading">all expert digital services</h4>
-            <p class="services__text text">Налаштуванням і веденням займаються професіонали, які закінчили спеціальні курси і мають великий досвід роботи в цій сфері.
+            <p class="services__text text">Налаштуванням і веденням займаються професіонали, які закінчили спеціальні
+                курси і мають великий досвід роботи в цій сфері.
                 Розробляємо ефективні і швидкі стратегії, для економії Вашого бюджету і підвищення конверсій.
             </p>
             <a href="#" class="services__btn btn">всі послуги</a>
@@ -84,7 +93,8 @@
     <div class="blog__wrapper wrapper">
         <div class="blog__title title">
             <h3 class="blog__heading heading">Наші роботи</h3>
-            <p class="blog__text text">Таргетована реклама - перспективний напрямок просування різних товарів або послуг в соціальних мережах, таких як Facebook, Instagram і ін.
+            <p class="blog__text text">Таргетована реклама - перспективний напрямок просування різних товарів або послуг
+                в соціальних мережах, таких як Facebook, Instagram і ін.
             </p>
         </div>
         <div class="blog__box">
@@ -92,7 +102,9 @@
                 <img src="src/img/blog/1.jpeg" alt="image for post" class="post__image">
                 <h5 class="post__description description">Доставка суші і бургерів.</h5>
                 <address class="post__author">Автор: Кириченко Діма</address>
-                <p class="post__text text">Новий ресторан доставки ролів і бургерів в Уфа. Багато цікавих акцій на сети і бургери. Безкоштовна доставка по місту при замовленні від 500 р. протягом 45 хвилин. Безкоштовна доставка за межі міста при замовленні від 800 р. протягом 1,5 годин.
+                <p class="post__text text">Новий ресторан доставки ролів і бургерів в Уфа. Багато цікавих акцій на сети
+                    і бургери. Безкоштовна доставка по місту при замовленні від 500 р. протягом 45 хвилин. Безкоштовна
+                    доставка за межі міста при замовленні від 800 р. протягом 1,5 годин.
                 </p>
                 <a href="blog.html" class="post__link link">Читати більше</a>
             </div>
@@ -100,7 +112,10 @@
                 <img src="src/img/blog/2.jpeg" alt="image for post" class="post__image">
                 <h5 class="post__description description">Просування шоу вистави "чайка"</h5>
                 <address class="post__author">Автор: Вікторія Ренко</address>
-                <p class="post__text text">Проект був непростий. Вистава вперше проходив в Росії і аудиторія не знала про нього. Лендінг НЕ конвертувався на самому початку. 2 рази правили на сайті текст і картинки, ще у ФБ був глюк - і кабінет заблокували на добу. Лити на обсязі на вузьке гео теж непросто. Аудиторія вигорає швидко.
+                <p class="post__text text">Проект був непростий. Вистава вперше проходив в Росії і аудиторія не знала
+                    про нього. Лендінг НЕ конвертувався на самому початку. 2 рази правили на сайті текст і картинки, ще
+                    у ФБ був глюк - і кабінет заблокували на добу. Лити на обсязі на вузьке гео теж непросто. Аудиторія
+                    вигорає швидко.
                 </p>
                 <a href="#" class="post__link link">Читати більше</a>
             </div>
@@ -108,7 +123,9 @@
                 <img src="src/img/blog/4.webp" alt="image for post" class="post__image">
                 <h5 class="post__description description">Продаж живих ялинок в Санкт-Петербурзі</h5>
                 <address class="post__author">Автор: Кириченко Діма</address>
-                <p class="post__text text">Для опту зібрав людей, що займаються сезонним бізнесом по ключових: вікна, двері, пісок, щебінь, бетон і і т.д. А також складаються в блогах: Аяз, бізнес молодість, Верютін, Гандапас, блог Галлії Бердникова, бізнес-ідеї, дропшіппінг, товарні блоги і т.п.
+                <p class="post__text text">Для опту зібрав людей, що займаються сезонним бізнесом по ключових: вікна,
+                    двері, пісок, щебінь, бетон і і т.д. А також складаються в блогах: Аяз, бізнес молодість, Верютін,
+                    Гандапас, блог Галлії Бердникова, бізнес-ідеї, дропшіппінг, товарні блоги і т.п.
                 </p>
                 <a href="#" class="post__link link">Читати більше</a>
             </div>

@@ -14,7 +14,7 @@ class login extends Controller
     {
         /** @var  $time - unix время на сервер and @var  $time - remixs_id сессия */
         $time = unixTime();
-        $remixsid = $system->request->cookie['remixsid_d'];
+        $remixsid = $system->request->cookie['remixsid'];
         
         if(isset($remixsid)) {
             /** @var  $session  информация о сессии */
