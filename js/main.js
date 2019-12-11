@@ -9,8 +9,19 @@ function showMessage(text) {
         });
     }, 10000);
 }
+function ge(el) {
+    return (typeof el == 'string' || typeof el == 'number') ? document.getElementById(el) : el;
+}
 
+function sender() {
+    let email = ge('emailSender').value;
 
+    $.post('/index.php?method=/main/setSender', {email: email, }, function(data){
+        data = $.parseJSON(data);
+
+        alert( data.data.message);
+    });
+}
 
 function redirect(url) {
     document.location.href=url;

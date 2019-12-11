@@ -145,7 +145,7 @@ body {
 
 .main-slider {
     position: relative;
-    background: #28282e url("./src/img/slider-bg.gif");
+    background: #28282e url("/src/img/slider-bg.gif");
     background-size: cover;
 }
 
@@ -210,7 +210,7 @@ body {
 
 .scroll {
     display: block;
-    background: #fff url("./src/img/scroll.png") no-repeat center center;
+    background: #fff url("/src/img/scroll.png") no-repeat center center;
     width: 46px;
     height: 46px;
     text-decoration: none;
@@ -539,7 +539,7 @@ body {
     border: none;
     width: 32px;
     height: 20px;
-    background-image: url("./src/img/email.png");
+    background-image: url("/src/img/email.png");
     cursor: pointer;
 }
 

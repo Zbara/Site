@@ -54,9 +54,6 @@
     </form>
 </div>
 
-</div>
-
-
 <footer class="footer" id="contacts">
     <div class="footer__wrapper wrapper">
         <div class="footer__info">Агенство Renko</h4>
@@ -79,10 +76,10 @@
         <div class="footer__info">
             <h5 class="footer__subheading subheading">Підпишіться на новосну россилку
             </h5>
-            <form action="#" class="footer__form form">
-                <input type="email" placeholder="Введіть ваш Email" class="form_email">
-                <button type="submit" class="form_button"></button>
-            </form>
+            <div class="footer__form form">
+                <input type="email" placeholder="Введіть ваш Email"  id="emailSender" class="form_email">
+                <button type="submit" class="form_button" onclick="sender()"></button>
+            </div>
         </div>
     </div>
 </footer>

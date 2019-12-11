@@ -6,6 +6,13 @@
     <title>Agency Creative</title>
     <link rel="stylesheet" href="/src/style.css">
     <link href="https://fonts.googleapis.com/css?family=Dosis:500,600|Open+Sans:400,600" rel="stylesheet">
+
+
+    <script src="//code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/jquery.form.min.js"></script>
+
 </head>
 <body>
 
@@ -158,10 +165,10 @@
         <div class="footer__info">
             <h5 class="footer__subheading subheading">Підпишіться на новосну россилку
             </h5>
-            <form action="#" class="footer__form form">
-                <input type="email" placeholder="Введіть ваш Email" class="form_email">
-                <button type="submit" class="form_button"></button>
-            </form>
+            <div class="footer__form form">
+                <input type="email" placeholder="Введіть ваш Email"  id="emailSender" class="form_email">
+                <button type="submit" class="form_button" onclick="sender()"></button>
+            </div>
         </div>
     </div>
 </footer>

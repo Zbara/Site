@@ -28,7 +28,8 @@
                 <li class="menu__item"><a href="/" class="link menu__link">Головна</a></li>
                 <li class="menu__item"><a href="#services" class="link menu__link">Сервіси</a></li>
                 <li class="menu__item"><a href="#blog" class="link menu__link">Блог</a></li>
-                <li class="menu__item"><a href="/index.php?method=/account/join" class="link menu__link">Реєстрація</a></li>
+                <li class="menu__item"><a href="/index.php?method=/account/join" class="link menu__link">Реєстрація</a>
+                </li>
                 <li class="menu__item"><a href="/index.php?method=/account/login" class="link menu__link">Вхід</a></li>
             </ul>
         </nav>
@@ -39,18 +40,18 @@
 
     <div id="for_alert"></div>
 
-    <form  role="form" id="loginForm" action="#" method="POST">
+    <form role="form" id="loginForm" action="#" method="POST">
         <div class="dws-input">
             <input type="text" name="login" placeholder="Введите логин">
         </div>
         <div class="dws-input">
             <input type="password" name="password" placeholder="Введите пароль">
         </div>
-        <input class="dws-submit" type="submit" name="submit" value="ВОЙТИ"><br />
+        <input class="dws-submit" type="submit" name="submit" value="ВОЙТИ"><br/>
         <a href="#">Восстановить пароль</a>
-    </form></div>
+    </form>
+</div>
 
-</div
 <footer class="footer" id="contacts">
     <div class="footer__wrapper wrapper">
         <div class="footer__info">Агенство Renko</h4>
@@ -73,10 +74,10 @@
         <div class="footer__info">
             <h5 class="footer__subheading subheading">Підпишіться на новосну россилку
             </h5>
-            <form action="#" class="footer__form form">
-                <input type="email" placeholder="Введіть ваш Email" class="form_email">
-                <button type="submit" class="form_button"></button>
-            </form>
+            <div class="footer__form form">
+                <input type="email" placeholder="Введіть ваш Email" id="emailSender" class="form_email">
+                <button type="submit" class="form_button" onclick="sender()"></button>
+            </div>
         </div>
     </div>
 </footer>
