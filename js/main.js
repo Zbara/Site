@@ -1,3 +1,22 @@
+/* Ошибки, предупреждения... */
+function showError(text) {
+    var element = $('<div class="alert in fade alert-danger"><strong>' + errorJS + '</strong> ' + text + '</div>').prependTo('#for_alert');
+    setTimeout(function () {
+        element.fadeOut(500, function () {
+            $(this).remove();
+        });
+    }, 10000);
+}
+function showSuccess(text) {
+    var element = $('<div class="alert in fade alert-success"><strong>' + yesJS + '</strong> ' + text + '</div>').prependTo('#for_alert');
+    setTimeout(function () {
+        element.fadeOut(500, function () {
+            $(this).remove();
+        });
+    }, 10000);
+}
+
+
 
 
 /* Ошибки, предупреждения... */

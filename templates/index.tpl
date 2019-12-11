@@ -30,6 +30,7 @@
                 <li class="menu__item"><a href="#blog" class="link menu__link">Блог</a></li>
 
                 {if $auth}
+                    <li class="menu__item"><a href="/index.php?method=/blog/new" class="link menu__link">Новина</a></li>
                     <li class="menu__item"><a href="/index.php?method=/account/logout" class="link menu__link">Вихід</a>
                     </li>
                 {else}
